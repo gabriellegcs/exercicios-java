@@ -6,7 +6,7 @@ public class Account {
 	private String name; //variavel de instancia de classe que guarda o nome da conta
 	
 	//construtor Account
-	public Account ( double initialBalance ) {
+	public Account ( double initialBalance, String name ) {
 		
 		//valida que initialBalance é > 0; Senão o saldo é iniciado com o valor 0 padrão
 		if ( initialBalance >= 0.0 ) 
@@ -41,7 +41,7 @@ public class Account {
 	} //fim do método getBalance
 	
 	//método para definir o nome do objeto 
-	public void setName(Strinng name) {
+	public void setName(String name) {
 		this.name = name; //armazena o nome
 	}
 	

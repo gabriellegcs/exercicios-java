@@ -2,24 +2,26 @@
 
 public class Account {
 	
-	private double balance; //variável de instância de classe que guarda o saldo
 	private String name; //variavel de instancia de classe que guarda o nome da conta
+	private double balance; //variável de instância de classe que guarda o saldo
 	
 	//construtor Account
 	public Account ( double initialBalance, String name ) {
 		
-		//valida que initialBalance é > 0; Senão o saldo é iniciado com o valor 0 padrão
-		if ( initialBalance >= 0.0 ) 
-			balance = initialBalance;
+		this.name = name; //atribui name à variável de instância name
 		
-	} //fim do construtor Account
+		if ( balance > 0.0 ) //se o saldo for válido 
+			this.balance = balance;
+		
+	} 
 	
-	//Cria método credit que credita (adiciona) uma quantia à conta
-	public void credit ( double amount ) {
+	//Cria método que deposita uma quantia à conta
+	public void deposit ( double depositAmount ) {
 		
-		balance = balance + amount; //adiciona quantia (amount) ao saldo (balance)
-		
-	} //fim do método crédit
+		if(depositAmount > 0.0) //se o saldo for válido
+			balance = balance + depositAmount;
+			
+	} 
 	
 	
 	//cria método para retirada de valor da conta
@@ -30,7 +32,7 @@ public class Account {
 		}
 		else System.out.print("Total de retirada excede o saldo da conta");
 		
-	} //fim do método withdraw
+	} 
 	
 	
 	//Cria método getBalance que retorna o saldo da conta 
@@ -38,7 +40,7 @@ public class Account {
 		
 		return balance; //fornece o valor do saldo ao método chamador
 		
-	} //fim do método getBalance
+	} 
 	
 	//método para definir o nome do objeto 
 	public void setName(String name) {

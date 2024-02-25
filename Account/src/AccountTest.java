@@ -31,7 +31,7 @@ public class AccountTest {
 		System.out.print("Digite o valor a depositar na conta: "); // prompt
 		depositAmount = input.nextDouble(); // entrada do usuário
 		System.out.printf("\nAdicionado $%.2f a conta\n\n", depositAmount);
-		myAccount.credit(depositAmount); // chama o método cŕedito e passa a varíavel depositAmount como argumento
+		myAccount.deposit(depositAmount); // chama o método cŕedito e passa a varíavel depositAmount como argumento
 
 		// exibe os saldos
 		System.out.printf("Saldo da conta: $%.2f \n", myAccount.getBalance());
